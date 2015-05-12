@@ -20,31 +20,11 @@ use Sonata\IntlBundle\Templating\Helper\NumberHelper;
  */
 class NumberExtension extends \Twig_Extension
 {
-
     protected $helper;
 
     public function __construct(NumberHelper $helper)
     {
         $this->helper = $helper;
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function initRuntime(\Twig_Environment $environment)
-    {
-        $this->environment = $environment;
-    }
-
-    /**
-     * Returns the token parser instance to add to the existing list.
-     *
-     * @return array An array of Twig_TokenParser instances
-     */
-    public function getTokenParsers()
-    {
-        return array(
-        );
     }
 
     public function getFilters()
