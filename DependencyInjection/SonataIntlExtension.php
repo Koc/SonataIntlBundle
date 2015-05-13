@@ -129,7 +129,7 @@ class SonataIntlExtension extends Extension
                 $tz = new \DateTimeZone($timezone);
             }
         } catch (\Exception $e) {
-            throw new \RuntimeException(sprintf('Unknown timezone "%s". Please check your sonata_intl configuration.', $timezone));
+            throw new \RuntimeException(sprintf('Unknown timezone "%s". Please check your sonata_intl configuration.', $timezone), 0, $e);
         }
     }
 }
