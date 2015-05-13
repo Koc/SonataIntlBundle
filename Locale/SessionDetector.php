@@ -22,7 +22,7 @@ class SessionDetector implements LocaleDetectorInterface
     protected $defaultLocale;
 
     /**
-     * @param \Symfony\Component\HttpFoundation\Session $session
+     * @param Session $session
      * @param string                                    $defaultLocale
      */
     public function __construct(Session $session, $defaultLocale)
