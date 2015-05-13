@@ -24,7 +24,7 @@ class RequestDetector implements LocaleDetectorInterface
     protected $defaultLocale;
 
     /**
-     * @param \Symfony\Component\DependencyInjection\ContainerInterface $container
+     * @param ContainerInterface $container
      * @param string                                                    $defaultLocale
      */
     public function __construct(ContainerInterface $container, $defaultLocale)
@@ -42,11 +42,12 @@ class RequestDetector implements LocaleDetectorInterface
      */
     public function getLocale()
     {
-        if ($this->container->isScopeActive("request")) {
+        if ($this->container->isScopeActive('request')) {
             if ($request = $this->container->get('request', ContainerInterface::NULL_ON_INVALID_REFERENCE)) {
                 return $request->getLocale();
             }
         }
+        
         return $this->defaultLocale;
     }
 }
