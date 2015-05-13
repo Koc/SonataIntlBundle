@@ -27,25 +27,6 @@ class LocaleExtension extends \Twig_Extension
         $this->helper = $helper;
     }
 
-    /**
-     * {@inheritdoc}
-     */
-    public function initRuntime(\Twig_Environment $environment)
-    {
-        $this->environment = $environment;
-    }
-
-    /**
-     * Returns the token parser instance to add to the existing list.
-     *
-     * @return array An array of Twig_TokenParser instances
-     */
-    public function getTokenParsers()
-    {
-        return array(
-        );
-    }
-
     public function getFilters()
     {
         return array(
